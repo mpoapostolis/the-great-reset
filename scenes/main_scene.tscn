@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://assets/TX Tileset Wall.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/TX Props.png" type="Texture" id=5]
 [ext_resource path="res://assets/Heroe/characters/player.png" type="Texture" id=6]
 [ext_resource path="res://scripts/Move.gd" type="Script" id=7]
+[ext_resource path="res://assets/Music/Paint It, Black (Epic Cello Version).mp3" type="AudioStream" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -779,3 +780,9 @@ anims/IdleUp = SubResource( 35 )
 anims/RunDown = SubResource( 28 )
 anims/RunRight = SubResource( 26 )
 anims/RunUp = SubResource( 29 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="KinematicBody2D"]
+stream = ExtResource( 8 )
+volume_db = -13.719
+pitch_scale = 0.56
+autoplay = true
